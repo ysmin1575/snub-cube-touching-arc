@@ -1,7 +1,7 @@
 # On the touching arc of the snub cube: a closed form and an independent check
 
-**Sumin Yu** — Independent researcher, Republic of Korea  
-**Version 1.0.1 · 2026-10-15**
+**Sumin Yoo** — Independent researcher, Republic of Korea  
+**Version 1.0.2 · 2026-10-15**
 
 This repository accompanies *On the touching arc of the snub cube: a closed form and an independent check*. It independently verifies the local closed-containment claims of Theorem 4.2 in L, W's preprint, [DOI 10.5281/zenodo.23118432](https://doi.org/10.5281/zenodo.23118432).
 
@@ -121,15 +121,15 @@ If mathematical assertions change, first review them independently and rerun `ru
 
 ## Citation and archive
 
-Sumin Yu (2026), *On the touching arc of the snub cube: a closed form and an independent check*, version 1.0.1, released 2026-10-15. Affiliation: Independent researcher, Republic of Korea. Structured citation metadata is in `CITATION.cff`.
+Sumin Yoo (2026), *On the touching arc of the snub cube: a closed form and an independent check*, version 1.0.2, released 2026-10-15. Affiliation: Independent researcher, Republic of Korea. Structured citation metadata is in `CITATION.cff`.
 
-Repository: [https://github.com/ysmin1575/snub-cube-touching-arc](https://github.com/ysmin1575/snub-cube-touching-arc). The release is archived on Zenodo; the version-specific code DOI is shown on the [GitHub release page](https://github.com/ysmin1575/snub-cube-touching-arc/releases/tag/v1.0.1) and Zenodo badge. The GitHub release archives the code through the Zenodo integration. The code DOI and any separate note DOI are not yet known; no DOI is assigned in this package. The cited L, W DOI identifies the reviewed preprint, not this release.
+Repository: [https://github.com/ysmin1575/snub-cube-touching-arc](https://github.com/ysmin1575/snub-cube-touching-arc). Code archive on Zenodo (all versions): [10.5281/zenodo.23397094](https://doi.org/10.5281/zenodo.23397094); each GitHub release also has its own version DOI on Zenodo. Companion note (preprint): [10.5281/zenodo.23397416](https://doi.org/10.5281/zenodo.23397416). The cited L, W DOI identifies the reviewed preprint, not this release.
 
 Use of AI. The author chose to audit the snub-cube preprint, directed the project and decided at each stage what to check and what to publish. AI systems were used extensively as research assistants: Claude (Anthropic) for planning, literature search, writing and running code, and drafting; GPT-6.1 Sol (OpenAI, via Codex) for independent derivations, the verification scripts and the first draft of this note. Every mathematical claim in this note is checked by the published scripts in exact or outward-rounded interval arithmetic, so the reader does not need to trust any AI system: running self_test.py reproduces all certified statements.
 
 ## Licenses and disclosure
 
-The original code is licensed under the MIT License in `LICENSE`: Copyright (c) 2026 Sumin Yu. The note text and PDF (`note/note.md`, `note/note.tex`, and `note/note.pdf`) are licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). These are separate licenses for the code and note; the note is not dual-licensed under MIT.
+The original code is licensed under the MIT License in `LICENSE`: Copyright (c) 2026 Sumin Yoo. The note text and PDF (`note/note.md`, `note/note.tex`, and `note/note.pdf`) are licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). These are separate licenses for the code and note; the note is not dual-licensed under MIT.
 
 No upstream source checkout, third-party preprint, full extracted preprint text, external executable, API credential or local machine path is part of the public inventory. Public authorship and source-attribution names are intentional. The release scanner checks file text and PDF text/metadata for candidate paths, email addresses, common credential formats and private-key headers. It reports candidates without displaying secret values. Pattern scanning cannot guarantee exhaustive detection or establish copyright ownership. Dependencies and cited works retain their own licenses; dependency packages are not vendored here. `out/`, virtual environments, third-party replays and build caches are excluded from the repository inventory.
 
@@ -143,7 +143,7 @@ The table lists every shipped file except `README.md` and `SHA256SUMS`. `SHA256S
 |---|---|
 | `.gitattributes` | `705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da` |
 | `.gitignore` | `31b5d963ff5d50801b70e9d926f1f3d1f9dd51c8b6fa082ef5253d4a1a33714c` |
-| `CITATION.cff` | `756e327a7a31a01876f50a2e253ea45a45c1b34756c41775dbcb239065b8e138` |
+| `CITATION.cff` | `1ad1aac927155a2b6778da849e269b2f9154f9b9914c2284913704df279e4b69` |
 | `code/arc_certify.py` | `63f40ff09cf6f14b2873c8396fee1de6729ffe8cbd2722dec0707b848f4f6ff4` |
 | `code/arc_review.py` | `458113f97bec151fc664aa1c748be338af706f709d9a872ddb076101030bdd23` |
 | `code/coverage_audit.py` | `fb35a73c7186c7507cc74f66bb168df4e080aecc7c29ed873619334f27b6325e` |
@@ -160,12 +160,12 @@ The table lists every shipped file except `README.md` and `SHA256SUMS`. `SHA256S
 | `data/reproducibility.json` | `6a8fe6a68715b72c564ba036baf5e873be563db60ff5730806ba34a2df1acfab` |
 | `data/structure.json` | `278092f54ef3e0b36969f429870b2b109abdc46e2827c1b990122dad5fe32096` |
 | `data/tom_arc_certificate.json` | `27f40dace966f2c96a401d8f38b492dbb318b74d8ab69c16dbd56d068ccf7b9a` |
-| `LICENSE` | `cee17c4a566cb6671cbed70397c7f596b36db8a38dc9664fa8aa92d64d93ab9f` |
-| `note/note.md` | `797c54af0267336f6b9a21eb37c36180f74f2677d7218228ca42d1748258b947` |
-| `note/note.pdf` | `db9af9a3fb91b2f5ff63340a26791d2265a27c1d4460fad0dd79bc8d1c98f403` |
-| `note/note.tex` | `506768264b06a26e3dcd8a7efbfa87f3f1dcec79d9e13158e260391266a97b2b` |
+| `LICENSE` | `f6bdb2635540b1a9464ec252c251729831436ad79a69148732e15dbdc45eafec` |
+| `note/note.md` | `d747c03326b851fa8d2cefdc1ae7aae356bba2768692787c53099d986c99a5f1` |
+| `note/note.pdf` | `6500d53dc969f326288fdb13cf1cc7e35634cb292d5b8b94b6b8bbf941bb0fc7` |
+| `note/note.tex` | `3c72c7ff9601812bbdc137c8d2f35d55dcb8a99bc9eae4ffb6d830026694b339` |
 | `note/novelty.md` | `28a4723bc5a598880e5c976d83624ac1390cd04f07038abde85166c112efb2ee` |
-| `release_check.py` | `7e8d9ae3313ff0393f4d1cf208faf1e07ec7ce6db4f4eb57d784dcad2b681c7c` |
+| `release_check.py` | `a1d7a14bf4ab5c84a4e19c84ecfc7e0e75e50359eb3709bfee39443f5f26608f` |
 | `requirements.txt` | `5ea23b28cd67c6e10d21b06e0695756c2ae58f155a6e09bafa42f033a0e747f1` |
 | `run_all.py` | `82b89e0a031ebd07e17b4ae4f6d83ba63f5136c0f34117d86c352f1133ad2d83` |
 | `self_test.py` | `6df957f9bfb8af4c5146a85c236f258d3bc8c4b09010032aa79ef9fdf11db963` |

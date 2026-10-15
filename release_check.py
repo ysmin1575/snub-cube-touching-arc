@@ -67,7 +67,7 @@ def scan():
     assert [p.relative_to(ROOT).as_posix() for p in scanned if p.suffix == '.pdf'] == ['note/note.pdf']
     assert not any(p.suffix.lower() in {'.exe', '.dll', '.zip', '.pem', '.key'} for p in scanned)
     result = {'status': 'PASS', 'files_scanned': len(scanned), 'findings': findings,
-              'intentional_public_names': ['Sumin Yu', 'L, W and Tom 7 (source citations)'],
+              'intentional_public_names': ['Sumin Yoo', 'L, W and Tom 7 (source citations)'],
               'third_party_pdf_count': 0,
               'limitations': 'Pattern scan plus content review; authorship names are intentional. Not an exhaustive secret-detection or copyright-clearance guarantee.'}
     out = ROOT / 'out'
