@@ -1,6 +1,6 @@
 # On the touching arc of the snub cube: a closed form and an independent check
 
-**Sumin Yu — Independent researcher, Republic of Korea**  
+**Sumin Yoo — Independent researcher, Republic of Korea**  
 **Version 1.0 · 2026-10-15**  
 Note text and PDF: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
@@ -164,7 +164,7 @@ The recorded environment is Python 3.13.15, NumPy 2.5.2, mpmath 1.3.0, SymPy 1.1
 
 The reviewed preprint is DOI `10.5281/zenodo.23118432`. The noperts snapshot is commit `0824ef598e8637481848092ff283d815cf0c04e8`. Its recorded source search covers that snapshot only, not repository history or a literature-wide priority claim. This verification concerns Theorem 4.2 and the local family through \(\mu=1/3\), plus the two textual remarks. It does not certify all poses/translations, either global non-Rupert result, or a global Nieuwland constant.
 
-Data and code availability. The version 1.0 release is available at [https://github.com/ysmin1575/snub-cube-touching-arc](https://github.com/ysmin1575/snub-cube-touching-arc) and archived on Zenodo; its version-specific code DOI is `CODE_DOI_PENDING` (to be filled in after the release).
+Data and code availability. The version 1.0.1 release is available at [https://github.com/ysmin1575/snub-cube-touching-arc](https://github.com/ysmin1575/snub-cube-touching-arc) and archived on Zenodo; its version-specific code DOI is [https://doi.org/10.5281/zenodo.23397095](https://doi.org/10.5281/zenodo.23397095).
 
 Use of AI. The author chose to audit the snub-cube preprint, directed the project and decided at each stage what to check and what to publish. AI systems were used extensively as research assistants: Claude (Anthropic) for planning, literature search, writing and running code, and drafting; GPT-6.1 Sol (OpenAI, via Codex) for independent derivations, the verification scripts and the first draft of this note. Every mathematical claim in this note is checked by the published scripts in exact or outward-rounded interval arithmetic, so the reader does not need to trust any AI system: running self_test.py reproduces all certified statements.
 
