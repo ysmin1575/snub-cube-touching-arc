@@ -1,7 +1,7 @@
 # On the touching arc of the snub cube: a closed form and an independent check
 
 **Sumin Yu** — Independent researcher, Republic of Korea  
-**Version 1.0 · 2026-10-15**
+**Version 1.0.1 · 2026-10-15**
 
 This repository accompanies *On the touching arc of the snub cube: a closed form and an independent check*. It independently verifies the local closed-containment claims of Theorem 4.2 in L, W's preprint, [DOI 10.5281/zenodo.23118432](https://doi.org/10.5281/zenodo.23118432).
 
@@ -121,9 +121,9 @@ If mathematical assertions change, first review them independently and rerun `ru
 
 ## Citation and archive
 
-Sumin Yu (2026), *On the touching arc of the snub cube: a closed form and an independent check*, version 1.0, released 2026-10-15. Affiliation: Independent researcher, Republic of Korea. Structured citation metadata is in `CITATION.cff`.
+Sumin Yu (2026), *On the touching arc of the snub cube: a closed form and an independent check*, version 1.0.1, released 2026-10-15. Affiliation: Independent researcher, Republic of Korea. Structured citation metadata is in `CITATION.cff`.
 
-Repository: [https://github.com/ysmin1575/snub-cube-touching-arc](https://github.com/ysmin1575/snub-cube-touching-arc). The release is archived on Zenodo; the version-specific code DOI is shown on the [GitHub release page](https://github.com/ysmin1575/snub-cube-touching-arc/releases/tag/v1.0) and Zenodo badge. The GitHub release archives the code through the Zenodo integration. The code DOI and any separate note DOI are not yet known; no DOI is assigned in this package. The cited L, W DOI identifies the reviewed preprint, not this release.
+Repository: [https://github.com/ysmin1575/snub-cube-touching-arc](https://github.com/ysmin1575/snub-cube-touching-arc). The release is archived on Zenodo; the version-specific code DOI is shown on the [GitHub release page](https://github.com/ysmin1575/snub-cube-touching-arc/releases/tag/v1.0.1) and Zenodo badge. The GitHub release archives the code through the Zenodo integration. The code DOI and any separate note DOI are not yet known; no DOI is assigned in this package. The cited L, W DOI identifies the reviewed preprint, not this release.
 
 Use of AI. The author chose to audit the snub-cube preprint, directed the project and decided at each stage what to check and what to publish. AI systems were used extensively as research assistants: Claude (Anthropic) for planning, literature search, writing and running code, and drafting; GPT-6.1 Sol (OpenAI, via Codex) for independent derivations, the verification scripts and the first draft of this note. Every mathematical claim in this note is checked by the published scripts in exact or outward-rounded interval arithmetic, so the reader does not need to trust any AI system: running self_test.py reproduces all certified statements.
 
@@ -143,7 +143,7 @@ The table lists every shipped file except `README.md` and `SHA256SUMS`. `SHA256S
 |---|---|
 | `.gitattributes` | `705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da` |
 | `.gitignore` | `31b5d963ff5d50801b70e9d926f1f3d1f9dd51c8b6fa082ef5253d4a1a33714c` |
-| `CITATION.cff` | `b32ee916c13594850ff6ff3c2e2372a1cf77c37ae0671899ce32468f8efa2c1b` |
+| `CITATION.cff` | `756e327a7a31a01876f50a2e253ea45a45c1b34756c41775dbcb239065b8e138` |
 | `code/arc_certify.py` | `63f40ff09cf6f14b2873c8396fee1de6729ffe8cbd2722dec0707b848f4f6ff4` |
 | `code/arc_review.py` | `458113f97bec151fc664aa1c748be338af706f709d9a872ddb076101030bdd23` |
 | `code/coverage_audit.py` | `fb35a73c7186c7507cc74f66bb168df4e080aecc7c29ed873619334f27b6325e` |

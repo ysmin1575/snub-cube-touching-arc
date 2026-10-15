@@ -2,15 +2,13 @@ cff-version: 1.2.0
 message: "Please cite the archived software version used for verification. The release is archived on Zenodo; its DOI is shown on the GitHub release page and Zenodo badge."
 type: software
 title: "On the touching arc of the snub cube: a closed form and an independent check"
-version: "1.0"
+version: "1.0.1"
 authors:
   - family-names: "Yu"
     given-names: "Sumin"
     affiliation: "Independent researcher, Republic of Korea"
-# MIT applies to the code; CC-BY-4.0 applies to the note text and PDF.
-license:
-  - MIT
-  - CC-BY-4.0
+# The note text and PDF in note/ are licensed CC-BY-4.0 (see README).
+license: MIT
 abstract: >-
   Independent exact-field and Arb verification of the touching arc in
   Theorem 4.2 of L, W, DOI 10.5281/zenodo.23118432, with the closed form
