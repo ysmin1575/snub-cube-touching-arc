@@ -141,6 +141,7 @@ The table lists every shipped file except `README.md` and `SHA256SUMS`. `SHA256S
 
 | File | SHA-256 |
 |---|---|
+| `.gitattributes` | `705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da` |
 | `.gitignore` | `31b5d963ff5d50801b70e9d926f1f3d1f9dd51c8b6fa082ef5253d4a1a33714c` |
 | `CITATION.cff` | `b32ee916c13594850ff6ff3c2e2372a1cf77c37ae0671899ce32468f8efa2c1b` |
 | `code/arc_certify.py` | `63f40ff09cf6f14b2873c8396fee1de6729ffe8cbd2722dec0707b848f4f6ff4` |
