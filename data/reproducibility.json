@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "python": "3.13.15",
+  "packages": {
+    "numpy": "2.5.2",
+    "mpmath": "1.3.0",
+    "sympy": "1.14.0",
+    "python-flint": "0.9.0",
+    "pypdf": "6.20.1"
+  },
+  "execution": "one process; sequential; numerical thread limits 1; no subprocess or worker",
+  "seconds": 8.298509499996726,
+  "checks": [
+    {
+      "script": "code/label_structure.py",
+      "sha256": "e53ac828a8bef5f77e273ef724c5ce1bcf6cc59e8e80e4aefd4c2c4dc5e35adb",
+      "seconds": 6.854835499998444,
+      "exit_code": 0
+    },
+    {
+      "script": "code/arc_certify.py",
+      "sha256": "63f40ff09cf6f14b2873c8396fee1de6729ffe8cbd2722dec0707b848f4f6ff4",
+      "seconds": 0.04668080000192276,
+      "exit_code": 0
+    },
+    {
+      "script": "code/arc_review.py",
+      "sha256": "458113f97bec151fc664aa1c748be338af706f709d9a872ddb076101030bdd23",
+      "seconds": 0.37601619999986724,
+      "exit_code": 0
+    },
+    {
+      "script": "code/lemmas_audit.py",
+      "sha256": "83ef9113b00adde8a6ece40ab071aa0a339e78ada8ef7193d256d08cf904937e",
+      "seconds": 0.8966705999991973,
+      "exit_code": 0
+    },
+    {
+      "script": "code/coverage_audit.py",
+      "sha256": "fb35a73c7186c7507cc74f66bb168df4e080aecc7c29ed873619334f27b6325e",
+      "seconds": 0.021036300000560004,
+      "exit_code": 0
+    },
+    {
+      "script": "code/tom_arc_certify.py",
+      "sha256": "2ab58bf27df7eae9a75665bd2692c1a64f3bd9405d72ed4c4eaa50425b0ce9ef",
+      "seconds": 0.043322999998054,
+      "exit_code": 0
+    }
+  ]
+}

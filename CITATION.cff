@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "Please cite the archived software version used for verification. The release is archived on Zenodo; its DOI is shown on the GitHub release page and Zenodo badge."
+type: software
+title: "On the touching arc of the snub cube: a closed form and an independent check"
+version: "1.0"
+authors:
+  - family-names: "Yu"
+    given-names: "Sumin"
+    affiliation: "Independent researcher, Republic of Korea"
+# MIT applies to the code; CC-BY-4.0 applies to the note text and PDF.
+license:
+  - MIT
+  - CC-BY-4.0
+abstract: >-
+  Independent exact-field and Arb verification of the touching arc in
+  Theorem 4.2 of L, W, DOI 10.5281/zenodo.23118432, with the closed form
+  theta_star = arctan(2-t), a comparison with Tom 7's noperts description,
+  and two local remarks on Lemma 5.2 and Appendix A.4.
+keywords:
+  - snub cube
+  - Rupert problem
+  - touching arc
+  - tribonacci constant
+  - exact arithmetic
+  - interval arithmetic
+date-released: "2026-10-15"
+repository-code: "https://github.com/ysmin1575/snub-cube-touching-arc"
+url: "https://github.com/ysmin1575/snub-cube-touching-arc"
+# Release DOI: see the GitHub release page and Zenodo badge.
+# Zenodo integration creates the code DOI when the GitHub release is archived.
+# The code DOI and any separate note DOI are not yet known; no DOI is assigned here.

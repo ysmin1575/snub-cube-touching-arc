@@ -1,0 +1,51 @@
+{
+  "status": "VERIFIED: independent review and exact additional geometric checks",
+  "root_to_label": [
+    3,
+    14,
+    8,
+    5,
+    6,
+    17,
+    4,
+    12,
+    20,
+    0,
+    18,
+    22,
+    7,
+    10,
+    2,
+    1,
+    15,
+    23,
+    21,
+    16,
+    19,
+    9,
+    13,
+    11
+  ],
+  "hull_in_labels": [
+    8,
+    3,
+    21,
+    23,
+    11,
+    13,
+    6,
+    2
+  ],
+  "extra_checks": {
+    "nonzero_height_difference_edges": 6,
+    "horizontal_noncollapse_edges": 2,
+    "strict_turns_at_zero": 8,
+    "zero_turns_at_zero": 0
+  },
+  "all_384_affine_determinants_independently_equal": true,
+  "all_edges_nondegenerate_for_entire_positive_interval": true,
+  "all_turns_strict_for_positive_s_and_nonnegative_at_zero": true,
+  "critical_value_exact": "tan(theta_star)=2-t",
+  "rotation_equivalence": "eps=-tan(theta),delta=0 gives Gibbs r=tan(theta)*a4, hence positive right-handed rotation +2theta. Ku leaves every shadow point fixed. No translation is used.",
+  "review_finding": "Full-interval noncollapse, distinct hull vertices, strict cyclic turns and all supporting halfplanes certify the actual bounded convex hull; no certificate flaw remains."
+}

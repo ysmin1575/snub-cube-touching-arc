@@ -1,0 +1,425 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+  10pt,
+  a4paper,
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=20mm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{amsmath,amssymb,amsthm}
+\setlength{\emergencystretch}{2em}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  pdftitle={On the touching arc of the snub cube: a closed form and an independent check},
+  pdfauthor={Sumin Yu},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{On the touching arc of the snub cube: a closed form and an
+independent check}
+\author{Sumin Yu\\{\normalsize Independent researcher, Republic of Korea}}
+\date{Version 1.0 -- 2026-10-15\\{\small Note text and PDF: \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}.}}
+
+\begin{document}
+\maketitle
+
+The snub cube admits an initial arc of poses in which one congruent
+shadow is contained in another with boundary contact. L, W established
+this arc and enclosed its endpoint numerically in Theorem 4.2 of their
+preprint. We give the compact expression \(\theta_*=\arctan(2-t)\),
+where \(t\) is the tribonacci constant, and an independent certificate
+using exact arithmetic in \(\mathbb Q(t)\) and Arb interval arithmetic.
+A change of coordinates identifies this arc with the tie described in
+Tom 7's repository; its angular parameter has the same endpoint, whereas
+its Cayley parameter ends at \(2-t\). Thus the repository's approximate
+value \(0.165\) overstates the initial touching range under either
+interpretation. Two separate remarks concern a weight-sign inference and
+a binary64 bound in the L, W text. The scope is this arc and these
+textual points; no global non-Rupert certificate is reproduced here.
+
+\section{Setup and statement}\label{setup-and-statement}
+
+Let \(t\in(1,2)\) be the unique real root of \(t^3-t^2-t-1=0\), and put
+\(q=1/t=t^2-t-1\). Let \(V\) comprise the even permutations of
+\((\pm1,\pm q,\pm t)\) with an even number of plus signs and the odd
+permutations with an odd number of plus signs. The 24-point convex hull
+\(P=\operatorname{conv}V\) is one chirality of the snub cube. A uniform
+scaling or a simultaneous orthogonal change of coordinates does not
+affect the containment question.
+
+Write
+
+\[a_4=e_z,\quad C=(q-1,q+1,0),\quad B=C\times a_4=(q+1,1-q,0),\]
+
+\[u_\theta=\widehat C\cos\theta-\widehat B\sin\theta,\qquad
+K_n=I-\frac{2nn^{\mathsf T}}{n\cdot n},\qquad K_0=K_C.\]
+
+Here a hat denotes normalization, and \(\pi_u\) denotes orthogonal
+projection onto \(u^\perp\). Rotations are active, right-handed
+rotations. In particular, the \(xz\)-block of \(R_y(\alpha)\) is
+\(\left(\begin{smallmatrix}\cos\alpha&\sin\alpha\\-\sin\alpha&\cos\alpha\end{smallmatrix}\right)\).
+We ask for \textbf{closed containment at zero translation}, not
+containment in the interior. For unit \(u\), define the clearance of a
+fixed pose by
+\(\min_{d\perp u,\ |d|=1}(h_{\rm hole}(d)-h_{\rm plug}(d))\). Thus
+closed containment gives nonnegative clearance, and contact gives zero
+clearance.
+
+\textbf{Theorem.} For \(0\leq\theta\leq\arctan(1/3)\),
+
+\[\pi_{u_\theta}(K_0P)\subseteq\pi_{u_\theta}(P)
+\quad\Longleftrightarrow\quad
+0\leq\theta\leq\boxed{\arctan(2-t)}.\]
+
+Equivalently the plug can be \(R_z(2\theta)P\), with no translation. The
+clearance is exactly zero throughout this initial arc. Every angle
+immediately beyond its endpoint, up to \(\arctan(1/3)\), fails closed
+containment for this pose. The angular domain is explicit because the
+family is periodic; this is not an assertion that containment occurs
+only once among all real angles.
+
+\newpage
+
+\section{Proof and certificate}\label{proof-and-certificate}
+
+Set \(s=\tan\theta\). Since \(|B|=|C|\), coordinates for the screen,
+after a positive horizontal rescaling, are
+
+\[Q_s(v)=(B\cdot v+sC\cdot v,v_z),\qquad
+Q'_s(v)=(B\cdot v-sC\cdot v,v_z).\]
+
+The latter are the coordinates of \(K_0v\). The rescaling is invertible
+and hence preserves containment and the signs of oriented areas. In a
+labeling consistent with every named vertex constraint in {[}LW{]}, the
+outer boundary has cyclic order
+
+\[(8,3,21,23,11,13,6,2).\]
+
+This order is a candidate used by the certificate, not a numerically
+trusted hull. Its eight edges are tested against all 24 outer vertices
+and all 24 reflected plug vertices. Each of these 384 determinants has
+the affine form \(A+sD\) over \(\mathbb Q(t)\). Nonnegative values at
+\(s=0\) and \(s=2-t\) establish every inequality throughout the interval
+by linear interpolation. Exact zero tests are performed in
+\(\mathbb Q[t]/(t^3-t^2-t-1)\); nonzero signs are enclosed using Arb.
+Distinctness of the boundary vertices, noncollapsing edges, and strictly
+positive cyclic turns are also checked throughout the interval,
+establishing that the supporting polygon is the actual convex hull. A
+second implementation of the field arithmetic recomputes all 384
+coefficients.
+
+The first failing test is the reflected vertex \(p=(-t,q,-1)\), labeled
+20, against the oriented edge
+
+\[a=(-t,-1,-q),\qquad b=(-1,-q,-t),\]
+
+labeled \(8\to3\). Direct reduction of its determinant gives
+
+\[\det\bigl(Q_s(b)-Q_s(a),Q'_s(p)-Q_s(a)\bigr)
+=2(t-1)^2(2-t-s).\]
+
+The positive prefactor \(2(t-1)^2\) makes the root exactly \(s_*=2-t\).
+The half-turn \(\operatorname{diag}(-1,-1,1)\) gives the identical
+obstruction at reflected vertex 17 against edge \(21\to23\). The first
+edge remains supporting for \textbf{every} \(s\in[0,1/3]\), as its
+outer-vertex affine inequalities are nonnegative at both endpoints. Its
+plug determinant is strictly negative for \(s\in(2-t,1/3]\), proving the
+converse.
+
+Finally \(K_{u_\theta}K_0=R_z(2\theta)\), and
+\(\pi_{u_\theta}K_{u_\theta}=\pi_{u_\theta}\). This proves the rotation
+equivalence. The plug rotation preserves \(v_z\), and
+\(a_4\perp u_\theta\), so both vertical support values are equal; the
+contained shadow always touches. This observation also rules out strict
+containment by translating this particular pair of shadows, since
+translation cannot reduce their equal vertical widths.
+
+At 384-bit working precision the certified enclosure is
+
+\[\begin{aligned}
+\theta_*\in[\,&0.1593506261845691446953081463393635724078,\\
+&0.1593506261845691446953081463393635724079\,]\,\mathrm{rad}.
+\end{aligned}\]
+
+It is approximately \(9.13011834314267604063121785735^\circ\). The
+decimal interval has exact rational endpoints and width \(10^{-40}\); it
+is not a confidence interval or a sample-based estimate.
+
+\newpage
+
+\section{Comparison with the two
+sources}\label{comparison-with-the-two-sources}
+
+In {[}LW, Theorem 4.2{]}, \(\theta_0=\arctan(0.16071324478583)\) and
+\(\theta_*\in[\theta_0,\theta_0+10^{-14}]\). Our check gives
+\(\theta_*-\theta_0\approx8.64418\times10^{-15}\), within that bracket.
+The preprint already establishes the arc and characterizes its endpoint
+by the first signed-area zero. Our contribution is its simplification,
+an independent containment certificate, and the explicit comparison
+below. To our knowledge, the closed form is not stated in the supplied
+October 3 version of {[}LW{]} or the inspected repository version of
+{[}Tom7{]}. This is a claim about those versions, not a literature-wide
+priority claim.
+
+Tom 7's exact frame is
+
+\[x=(1,0,t^2),\quad e_1=(-t^2,0,1),\quad Z=e_y.\]
+
+The wall in question is the \(XZ\)-plane of outer views. On side 1 of
+the cap chart, the tie has
+
+\[u_T=x-\mu e_1,\qquad w=\mu e_y,\qquad
+\phi=\arctan\mu,\qquad R_T=R_y(2\phi).\]
+
+Because \(x\perp e_1\) and \(|x|=|e_1|\), \(\phi\) is the angle past
+\(u^*=x/|x|\), namely the angle denoted \(\varepsilon\) in the markdown
+explanation. With \(H_n=2nn^{\mathsf T}/|n|^2-I=-K_n\), the half-turn
+convention used by the repository, \(H_{u_T}H_x=K_{u_T}K_x=R_y(2\phi)\).
+Individually \(H_u\) negates a screen projection; \(K_u\) fixes it.
+Their products coincide. The inner viewing direction is
+\(R_T^{\mathsf T}u_T\), explaining the opposite-angle inner view in the
+C++ comment.
+
+The proper signed permutation \(S(X,Y,Z)=(-X,Z,Y)\), followed by
+division by \(t\), maps Tom's solid to \(P\). If \(k=1-q>0\), then
+
+\[Sx=C/k,\qquad Se_1=B/k,\qquad Se_y=a_4.\]
+
+Consequently \(\phi=\varepsilon_{\rm Tom}=\theta\), \(\mu=\tan\theta\),
+and the L, W chart variable is \(\varepsilon_{\rm LW}=-\mu\). These are
+the \textbf{same family}. Directly in Tom's unnormalized screen
+coordinates \(((e_1+\mu x)\cdot v,v_Y)\), the critical edge vertices and
+plug vertex are
+
+\[(t^2,-1,-t),\quad(t,-t^2,-1),\quad(t^2,-t,1),\]
+
+and their determinant is
+
+\[2(t-1)-2t(t+1)\mu=2t(t+1)(2-t-\mu).\]
+
+Thus \(\mu_*=2-t=0.160713244785838867448\ldots\) and
+\(\varepsilon_{\rm Tom,*}=\theta_*\); the relative rotation ends at
+\(2\theta_*=0.318701252369138\ldots\) radians. The markdown states about
+\(0.165\) \textbf{radians} (\texttt{snub-cube.md:57–60}), while the C++
+comment states \(\mu\) up to about \(0.165\)
+(\texttt{search/sc/sccapcert.cc:23–26}). The new certificate proves
+failure at both \(\mu=0.165\) and \(\varepsilon_{\rm Tom}=0.165\)
+radians: the critical signed determinants are respectively enclosed near
+\(-0.0447731222\) and \(-0.0605847034\). Hence changing between angle
+and Cayley parameter does not resolve either approximate bound. This
+corrects a descriptive range, without showing any failure of the global
+cap/tube exclusion certificates. Their \(\mu\leq1/3\) domain need not
+consist entirely of touching poses.
+
+All 503 tracked files of {[}Tom7{]} were enumerated and all 500 text
+files searched, including Lean, C++, generated data and Markdown. The
+three binary images were excluded from textual search. The scan did not
+cover repository history, external \texttt{nopert229} prototypes, linked
+videos/papers, or unprovided {[}LW{]} supplements; \texttt{novelty.md}
+records the evidence and limits.
+
+\newpage
+
+\section{Two remarks on {[}LW{]}}\label{two-remarks-on-lw}
+
+\textbf{Weight signs in Lemma 5.2.} A common sign does not imply that
+the weights are nonnegative. Flipping three negative weights also flips
+their weighted support gap, so it requires rechecking the strict
+inequality. An explicit counterexample to the general algebraic
+criterion is
+
+\[P_b=[-1,1]\times[-2,2]\times[-3,3],\quad u=e_1,\quad
+R(x,y,z)=(z,x,y),\quad r=(1,1,1),\quad D=4.\]
+
+In the \((y,z)\) screen the hole is \([-2,2]\times[-3,3]\) and the plug
+is \([-1,1]\times[-2,2]\), strictly contained at translation zero.
+Choose \(c=e_1,a_4=e_3,b=-e_2\), \(\varepsilon=\delta=0\), and these
+tests:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1304}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1304}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1304}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1304}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1304}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1739}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1739}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\(k\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(\nu_k\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(u\times\nu_k\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+plug vertex \(p_k\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+hole support vertex \(q_k\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\(\Delta_k\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\(g_k\)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & \((0,0,-1)\) & \((0,1,0)\) & \((1,2,3)\) & \((1,2,3)\) & −1 & −4 \\
+2 & \((0,1,0)\) & \((0,0,1)\) & \((1,2,3)\) & \((1,2,3)\) & −1 & −4 \\
+3 & \((0,-1,1)\) & \((0,-1,-1)\) & \((-1,-2,3)\) & \((1,-2,-3)\) & −1 &
+−8 \\
+\end{longtable}
+}
+
+Here \(g_k=\langle N(r)p_k-Dq_k,u\times\nu_k\rangle\),
+\(\sum\Delta_k(u\times\nu_k)=0\), and \(\sum\Delta_kg_k=16>0\). Each
+hole support test is valid. The constant chart \(\Phi=(0,0,1,1,1)\) on
+\([1,2]^5\), with distance variable \(y_0\) and \(m_F=1\), also meets
+the divisibility conditions. Thus the common-sign inference and its
+corresponding general criterion fail. This box is not a snub cube and is
+not a counterexample to either snub solid's non-Rupert conclusion. The
+needed correction is to require nonnegative weights and evaluate
+condition (3) using those same weights. Whether the actual {[}LW{]}
+certificates already do so is outside this check.
+
+\textbf{Appendix A.4 and binary64 constants.} Section 5.3 interprets
+decimal constants as binary64 values. However
+
+\[\operatorname{fl}(1.2)=\frac{5404319552844595}{4503599627370496}<\frac65,
+\quad \frac65-\operatorname{fl}(1.2)=\frac1{22517998136852480}.\]
+
+For the special pair with \(s_2=1/5\), \(f_2=1,d=-1\) gives
+\(|f_2-ds_2|=6/5\), violating the displayed bound if read as
+\(\leq\operatorname{fl}(1.2)\). For example \(\mu=1/100\),
+\(\varepsilon=\delta=-\mu\), \(r=(0,\mu,\mu)\) is a corresponding CORNER
+point. The exact fraction \(6/5\) repairs this wording. It is already
+admitted by the relevant exact chart bound, and the enlarged Shigh bound
+\(5/4\) is larger. This discrepancy is 0.2 ulp at 1.2; it does not
+introduce a new hole in the continuum cover checked by our audit.
+
+\newpage
+
+\section{Reproducibility, scope and author statement}
+\label{reproducibility-scope-and-author-statement}
+
+The public repository contains \texttt{code/} (six mathematical scripts),
+\texttt{data/} (reference JSON certificates and provenance), and
+\texttt{note/} (this note and the source-review record).
+From the repository root run:
+\begin{verbatim}
+python -B self_test.py
+python -B run_all.py
+\end{verbatim}
+Both commands execute the checks sequentially in one Python process with
+numerical thread limits set to 1. The self-test verifies SHA-256 integrity,
+reruns the mathematics and compares eight JSON certificates, and checks the
+five-page PDF. Generated results go to \texttt{out/}. No upstream PDF,
+clone, Lean build, C++ search or network access is needed. Historical input
+hashes identify the reviewed sources; source-document inspection is a
+separate procedure in the README and \texttt{novelty.md}.
+
+The recorded environment is Python 3.13.15, NumPy 2.5.2, mpmath 1.3.0,
+SymPy 1.14.0, python-flint 0.9.0, and pypdf 6.20.1. NumPy is recorded for
+environment parity; the certificate path does not use it. mpmath is a
+SymPy dependency; pypdf is used by the release self-test. Script hashes,
+measured runtime and claim-to-command mapping are in the README,
+\texttt{SHA256SUMS}, and \texttt{data/reproducibility.json}.
+
+The reviewed preprint is DOI 10.5281/zenodo.23118432. The noperts snapshot
+is commit \texttt{0824ef59\allowbreak{}8e863748\allowbreak{}1848092f\allowbreak{}f283d815\allowbreak{}cf0c04e8}.
+The source search concerns that snapshot only, not repository history or
+literature-wide priority. The check covers Theorem 4.2 and the local family
+through $\mu=1/3$, plus two textual remarks. It does not certify all
+poses/translations, either global non-Rupert result, or a global Nieuwland
+constant.
+
+Data and code availability. The version 1.0 release is available at
+\url{https://github.com/ysmin1575/snub-cube-touching-arc}
+and archived on Zenodo; its version-specific code DOI is \texttt{\detokenize{CODE_DOI_PENDING}} (to be filled in after the release).
+
+Use of AI. The author chose to audit the snub-cube preprint, directed the project and decided at each stage what to check and what to publish. AI systems were used extensively as research assistants: Claude (Anthropic) for planning, literature search, writing and running code, and drafting; GPT-6.1 Sol (OpenAI, via Codex) for independent derivations, the verification scripts and the first draft of this note. Every mathematical claim in this note is checked by the published scripts in exact or outward-rounded interval arithmetic, so the reader does not need to trust any AI system: running self\_test.py reproduces all certified statements.
+
+\small
+
+
+\textbf{References}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{{[}LW{]}} L, W (creator name as registered in Zenodo).
+  \emph{The Snub Cube and Snub Dodecahedron Are Not Rupert}. Preprint
+  dated 3 October 2026; the PDF title includes ``the'' before ``Snub
+  Dodecahedron.'' \href{https://doi.org/10.5281/zenodo.23118432}{DOI:
+  10.5281/zenodo.23118432}, especially Theorem 4.2, Lemma 5.2 and
+  Appendix A.4.
+\item
+  \textbf{{[}Tom7{]}} Tom 7. \emph{noperts}, snub-cube description and
+  sources, inspected at commit
+  \texttt{0824ef59\allowbreak{}8e863748\allowbreak{}1848092f\allowbreak{}f283d815\allowbreak{}cf0c04e8}, 14 October 2026;
+  the snub-cube status entry reports verification on 13 October.
+  \href{https://github.com/tom7/noperts/blob/0824ef598e8637481848092ff283d815cf0c04e8/snub-cube.md\#L53-L60}{Pinned
+  description},
+  \href{https://github.com/tom7/noperts/blob/0824ef598e8637481848092ff283d815cf0c04e8/search/sc/sccapcert.cc\#L6-L26}{C++
+  chart description},
+  \href{https://github.com/tom7/noperts/blob/0824ef598e8637481848092ff283d815cf0c04e8/proof/SnubCube/Caps.lean\#L35-L64}{exact
+  Lean frame}.
+\end{itemize}
+
+\end{document}

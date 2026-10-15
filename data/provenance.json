@@ -1,0 +1,31 @@
+{
+  "reviewed_preprint": {
+    "doi": "10.5281/zenodo.23118432",
+    "pdf_sha256": "b79ee5f3477e5e88b4967c50672e06293250f40875c7c633b74b1823f560786a",
+    "text_sha256": "f6988b1e63ba16a3f7493b2c0fb0a5451da355d454a6e568637b5c25a045c319",
+    "redistributed": false
+  },
+  "noperts": {
+    "url": "https://github.com/tom7/noperts",
+    "commit": "0824ef598e8637481848092ff283d815cf0c04e8",
+    "redistributed": false
+  },
+  "original_audit_script_sha256": {
+    "label_structure.py": "c7e61dcc3dc094f17765547dfcda6be82a63447b523489d0317ca2be2af7c9e6",
+    "arc_certify.py": "63f40ff09cf6f14b2873c8396fee1de6729ffe8cbd2722dec0707b848f4f6ff4",
+    "arc_review.py": "458113f97bec151fc664aa1c748be338af706f709d9a872ddb076101030bdd23",
+    "lemmas_audit.py": "9e31909d17fb8f935c58ba5280a8b078b3ef319c95340c510e82ebc5702d78f6",
+    "coverage_audit.py": "04928521cfa82911160ce1bd2fd2288f805df5e9545fd0d8331be82b376103de",
+    "tom_arc_certify.py": "c1025bd3e16e2592361a852db7722070eab16077cc48cb5dcebdb3ae6783f4d6"
+  },
+  "adaptation": "Copied scripts; repository-relative outputs; removed source-PDF/text presence checks and numerical discovery helper. Exact mathematical assertions retained. Historical hashes identify reviewed sources, not files read by the public run.",
+  "original_check_seconds": {
+    "label_structure.py": 7.251224600000569,
+    "arc_certify.py": 0.05395189999762806,
+    "arc_review.py": 0.4012449000001652,
+    "lemmas_audit.py": 0.8592877000010049,
+    "coverage_audit.py": 0.817618199998833,
+    "tom_arc_certify.py": 0.03657529999691178
+  },
+  "scope": "Theorem 4.2 touching family and two textual remarks; no global non-Rupert certificate."
+}

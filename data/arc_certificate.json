@@ -1,0 +1,71 @@
+{
+  "status": "VERIFIED",
+  "precision_bits": 384,
+  "t_ball": "[1.8392867552141611325518525646532866004241787460975922467787586394042032220819664 +/- 2.58e-80]",
+  "s_star_Qt": [
+    "2",
+    "-1",
+    "0"
+  ],
+  "s_star_ball": "[0.1607132447858388674481474353467133995758212539024077532212413605957968 +/- 2.21e-71]",
+  "theta_star_ball": "[0.1593506261845691446953081463393635724078925669113587719804872700618468 +/- 1.58e-71]",
+  "theta_star_enclosure": [
+    "0.1593506261845691446953081463393635724078925669113587719804872700618466",
+    "0.1593506261845691446953081463393635724078925669113587719804872700618470"
+  ],
+  "report_enclosure": [
+    "0.1593506261845691446953081463393635724078",
+    "0.1593506261845691446953081463393635724079"
+  ],
+  "degree_ball": "[9.13011834314267604063121785734668911080248969919428628413613 +/- 3.51e-60]",
+  "theta_minus_theta0": "[8.64417981357922360386874956279081484503022010769967386740222e-15 +/- 1.42e-75]",
+  "hull": [
+    2,
+    0,
+    18,
+    17,
+    23,
+    22,
+    4,
+    14
+  ],
+  "critical_area_factor_Qt": [
+    "2",
+    "-4",
+    "2"
+  ],
+  "critical_area_formula": "2*(t-1)^2*(2-t-s)",
+  "PDF_near_threshold_support_derivative_triangle": "VERIFIED on I",
+  "hole_counts": {
+    "positive_both": 170,
+    "zero_lo": 2,
+    "zero_hi": 0,
+    "identical_zero": 20
+  },
+  "plug_counts": {
+    "positive_both": 168,
+    "zero_lo": 8,
+    "zero_hi": 2,
+    "identical_zero": 14
+  },
+  "opposite": {
+    "edge": [
+      14,
+      2
+    ],
+    "plug": 2,
+    "A": [
+      "0",
+      "0",
+      "0"
+    ],
+    "D": [
+      "-4",
+      "-4",
+      "4"
+    ],
+    "D_ball": "[2.1747560507683054462834238872069919461008131906039357409632161513 +/- 2.47e-65]"
+  },
+  "elapsed_seconds": 0.03534909999871161,
+  "proof": "All determinants affine in s; exact field zeros, Arb endpoint signs. Convex interpolation covers every s in [0,s*]. A supporting edge and negative slope exclude all s in (s*,tan(theta0+1e-6)]."
+}
